@@ -1,0 +1,19 @@
+
+eventz-banking-demo/
+├── README.md
+├── requirements.txt
+├── main.py                # CLI or simulation runner
+├── broker.py              # RabbitMQ connector (pika)
+├── tuplespace.py          # Read/write to local file-based tuple space Y
+├── schemas/
+│   ├── customer.py        # Defines schemas for customer events
+│   ├── account.py         # Defines schemas for account events
+│   └── card.py            # Defines schemas for card events
+├── functions/
+│   ├── F_deposit.py
+│   ├── F_withdrawal.py
+│   ├── F_card_payment.py
+│   ├── F_block_account.py
+│   └── F_block_card.py
+└── data/
+    └── Y_archive.tsv      # Append-only immutable tuples

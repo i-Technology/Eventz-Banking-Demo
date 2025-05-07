@@ -1,0 +1,10 @@
+account_uuid	amount	balance	card_uuid	customer_uuid	event_type	original_event_uuid	reason	resulting_balance	status	timestamp	uuid
+acct001		200.0		cust001	AccountOpened				open	2025-05-07T14:21:08.914708	39ae3f58-a2e1-4332-ac35-a84bed5dc298
+acct001			card001		CardIssued				active	2025-05-07T14:21:08.914748	1eb41e2c-c4e0-4622-a43b-3bcea637a79d
+acct001	100.0				TransactionApproved			100.0		2025-05-07T14:21:08.914787	2655047e-7ec6-43bf-8f6c-28e2caf0a550
+acct001	50.0				TransactionApproved			150.0		2025-05-07T14:21:08.914854	51f02152-38bb-45b0-9e41-58ae3d2b9988
+					TransactionDeclined	None	Insufficient funds			2025-05-07T14:21:08.914906	fbe4c528-93ad-44f7-a545-81311108b6e0
+acct001					AccountBlocked					2025-05-07T14:21:08.914924	2f259850-0859-4c33-9792-742d55785144
+acct001	10.0				TransactionApproved			190.0		2025-05-07T14:21:08.914958	f2fb8a02-97f3-4796-8f56-587c00b18bb6
+			card001		CardBlocked					2025-05-07T14:21:08.915004	dc035f18-7375-4e32-a868-652a43349a18
+acct001	10.0				TransactionApproved			190.0		2025-05-07T14:21:08.915030	ecb8a3f9-ff80-45a7-92c3-1ab4ef83a0ea

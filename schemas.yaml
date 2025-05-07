@@ -1,0 +1,26 @@
+DepositMade:
+  account_uuid: str
+  amount: float
+  timestamp: str
+
+WithdrawalMade:
+  account_uuid: str
+  amount: float
+  timestamp: str
+
+CardPaymentRequested:
+  card_uuid: str
+  amount: float
+  merchant: str
+  timestamp: str
+
+AccountOpened:
+  customer_uuid: str
+  account_uuid: str
+  balance: float
+  status: str  # "open", "blocked"
+
+CardIssued:
+  account_uuid: str
+  card_uuid: str
+  status: str  # "active", "blocked"
