@@ -1,4 +1,3 @@
-Here's a polished `README.md` for your **[Eventz-Banking-Demo](https://github.com/i-Technology/Eventz-Banking-Demo)** repository, tailored for public GitHub audiences and aligned with your Eventz messaging:
 
 ---
 
