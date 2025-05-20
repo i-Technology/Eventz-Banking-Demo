@@ -83,3 +83,16 @@ from eventzAPI import export_tsv
 
 print("\n--- Exporting immutable archive to Y_archive.tsv ---")
 export_tsv()
+
+from eventzAPI import export_markdown
+export_markdown()
+
+from F_report_bank_summary import F_report_bank_summary
+from eventzAPI import export_tsv, export_markdown
+
+# Export archive
+export_tsv()
+export_markdown()
+
+# Generate custom business report
+F_report_bank_summary()

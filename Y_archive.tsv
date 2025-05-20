@@ -1,10 +1,32 @@
 account_uuid	amount	balance	card_uuid	customer_uuid	event_type	original_event_uuid	reason	resulting_balance	status	timestamp	uuid
-acct001		200.0		cust001	AccountOpened				open	2025-05-07T14:21:08.914708	39ae3f58-a2e1-4332-ac35-a84bed5dc298
-acct001			card001		CardIssued				active	2025-05-07T14:21:08.914748	1eb41e2c-c4e0-4622-a43b-3bcea637a79d
-acct001	100.0				TransactionApproved			100.0		2025-05-07T14:21:08.914787	2655047e-7ec6-43bf-8f6c-28e2caf0a550
-acct001	50.0				TransactionApproved			150.0		2025-05-07T14:21:08.914854	51f02152-38bb-45b0-9e41-58ae3d2b9988
-					TransactionDeclined	None	Insufficient funds			2025-05-07T14:21:08.914906	fbe4c528-93ad-44f7-a545-81311108b6e0
-acct001					AccountBlocked					2025-05-07T14:21:08.914924	2f259850-0859-4c33-9792-742d55785144
-acct001	10.0				TransactionApproved			190.0		2025-05-07T14:21:08.914958	f2fb8a02-97f3-4796-8f56-587c00b18bb6
-			card001		CardBlocked					2025-05-07T14:21:08.915004	dc035f18-7375-4e32-a868-652a43349a18
-acct001	10.0				TransactionApproved			190.0		2025-05-07T14:21:08.915030	ecb8a3f9-ff80-45a7-92c3-1ab4ef83a0ea
+acct001		200.0		cust001	AccountOpened				open	2025-05-19T14:56:33.974817	f15a3cec-b619-4f11-856d-9a882003063a
+acct001			card001		CardIssued				active	2025-05-19T14:56:33.974876	7a03339a-47b9-4cae-a02a-a2f7517882ae
+acct001	100.0				TransactionApproved			100.0		2025-05-19T14:56:33.974908	f1dc469f-3100-4d82-8e56-4036fcd7cdcc
+acct001	50.0				TransactionApproved			150.0		2025-05-19T14:56:33.974945	63650047-d392-4c00-b9e3-5a2024a09a5c
+					TransactionDeclined	None	Insufficient funds			2025-05-19T14:56:33.974978	ba0452a2-b61a-479d-851a-4529991cc7c7
+acct001					AccountBlocked					2025-05-19T14:56:33.975001	7d9ebc9a-a5d6-4136-9753-14e9ee5cbf7a
+acct001	10.0				TransactionApproved			190.0		2025-05-19T14:56:33.975026	6eba9791-33e7-4760-aed1-f9bd61342421
+			card001		CardBlocked					2025-05-19T14:56:33.975050	c858e5be-8b77-4566-ba69-5aa89c7a42f0
+acct001	10.0				TransactionApproved			190.0		2025-05-19T14:56:33.975079	1dd1175a-9f10-4b0b-b45c-0ca633bc658a
+acct001	-12.00				TransactionApproved		steve			2025-05-20T13:26:03.353797	4bd8cb7e-d437-4295-bf45-f6d1571ad914
+acct001	25.00				TransactionApproved		steve			2025-05-20T13:26:15.417650	070e108d-0e8b-4faf-81c4-156d48f6fdfc
+acct001	-22.00				TransactionApproved		Joe			2025-05-20T13:37:28.528758	75c589a9-ba01-449a-8bc3-046f0a6c4a16
+acct001	-234.00				TransactionApproved		john			2025-05-20T13:43:46.712455	91b907e2-9cdd-47ef-a41b-2427f2760937
+acct001	22.00				TransactionApproved		dale			2025-05-20T13:44:10.336067	b4f9b3dc-f8ea-4535-87c5-27d6468b9297
+acct001	-21.00				TransactionApproved		dale			2025-05-20T13:44:22.144020	0dd73173-0539-4037-9cda-b4b2d2b37d30
+acct001	-23.00				TransactionApproved		steve			2025-05-20T13:47:38.863100	68f17bc0-c1b8-4074-a79b-12e8b459263c
+acct001	23.00				TransactionApproved		jim			2025-05-20T13:47:56.151793	7e9d0058-e6de-47bf-823c-88a2969470c6
+acct001	-2.00				TransactionApproved		del			2025-05-20T13:52:28.367712	a7a94c0c-d6fb-4702-98cf-19f40815caad
+acct001	2.00				TransactionApproved		del			2025-05-20T13:52:42.223651	9c718aee-098e-480b-98a3-3464069f5dba
+acct001	-3.00				TransactionApproved		led			2025-05-20T13:58:06.439139	e9c58a1c-01c5-4048-9060-b4950336de6a
+acct001	3.00				TransactionApproved		led			2025-05-20T13:58:16.567188	df9828e0-f352-4661-82c6-5d2655811f21
+acct001	12.00				TransactionApproved		steve			2025-05-20T14:00:15.087296	4879e74d-2808-4047-9e7b-101c5e3189da
+acct001	-12.00				TransactionApproved		steve			2025-05-20T14:00:27.335130	d35438db-10ec-4ef9-8acf-2fa09d4ac153
+7dd9f4e4-bdf8-4ac7-86c5-a622b34fd4fd	AccountOpened	12345	03a00e13-4f35-4115-b8d9-14d0da610238	0.00	open	2025-05-20T14:41:34.219548
+dc185699-a98c-4f3d-898c-237956054138		0.00		12345	AccountOpened				open	2025-05-20T14:44:19.938445	80b7f531-6bfc-4c60-9ae4-b4faa73a2055
+dc185699-a98c-4f3d-898c-237956054138	100.00				TransactionApproved		Steve			2025-05-20T14:44:40.654668	6f395dd8-dc9c-4c33-8eb9-2a1740c829b1
+dc185699-a98c-4f3d-898c-237956054138	-10.00				TransactionApproved		Steve			2025-05-20T14:44:55.190918	f92427aa-eb7d-411c-92d4-a67cba1f323c
+9cdcfee6-d4f7-4514-ba14-d5af271182e5		0.00		12344	AccountOpened				open	2025-05-20T14:45:38.050006	4ccb0d7d-c49b-46c4-b5c7-a6ac30546a12
+9cdcfee6-d4f7-4514-ba14-d5af271182e5	120.00				TransactionApproved		Bob			2025-05-20T14:45:51.110671	cbda8ff9-22c4-408a-8035-f2d253299027
+dc185699-a98c-4f3d-898c-237956054138	-5.00				TransactionApproved		Steve			2025-05-20T15:13:54.467403	e97d0a35-873e-4462-9486-7e1097771cca
+9cdcfee6-d4f7-4514-ba14-d5af271182e5	-5.00				TransactionApproved		Bob			2025-05-20T15:14:15.883613	cff0fad0-b75e-403a-8a59-e393ba0cc7f4
