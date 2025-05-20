@@ -1,12 +1,6 @@
-
----
-
-### ✅ `README.md`
-
-````markdown
 # 🏦 Eventz Banking Demo
 
-This project demonstrates a **simplified distributed banking system** built using the [Eventz](https://eventzapi.com) methodology:  
+This project demonstrates a simplified distributed banking system using the Eventz methodology:  
 **`y = F(Y, e)`** — where each function `F` processes a new event `e` and the archive `Y` to produce a new immutable result `y`.
 
 ---
@@ -15,101 +9,73 @@ This project demonstrates a **simplified distributed banking system** built usin
 
 Simulates a basic banking system with:
 
-- ✅ Customers, Accounts, and Cards
+- ✅ Customers, Accounts, Cards
 - 💰 Deposits and Withdrawals
 - 💳 Card Payments
-- 🚫 Account/Card Blocking
-- 🧾 Immutable audit trail exported as `Y_archive.tsv`
+- 🔒 Blocked Accounts and Cards
+- 📊 Live Ledger GUI with user-specific views
+- 📄 Stakeholder PDF reporting
+- 📁 Immutable audit trail in `Y_archive.tsv`
 
 ---
 
-## 🔍 Why It Matters
+## 🧾 Interactive Ledger GUI (`ledger_gui.py`)
 
-Traditional systems are overloaded with:
-- Databases, microservices, and APIs
-- Coupling and complex state management
-- Expensive CQRS/event sourcing boilerplate
+- Users log in with their `customer_uuid`
+- If no account exists, the system prompts to create one
+- Transactions are filtered per user (based on `account_uuid`)
+- GUI shows:
 
-**Eventz solves this** with:
-- ✅ No database
-- ✅ No state to reload
-- ✅ Just pure functions and immutable tuples
+| Date | Payee | Amount | Balance |
+|------|--------|--------|---------|
 
----
-
-## 🛠 How It Works
-
-Each Python file is a pure Function `F`:
-- Reads `Y` (tuple archive)
-- Applies business rules to a new event `e`
-- Publishes a new `y` back to the archive
-
-Example:
-```python
-F_withdrawal({'account_uuid': 'acct001', 'amount': 50.0})
-````
-
----
-
-## 📁 Project Structure
-
-```
-eventzAPI.py        # Tuple archive and helper logic
-main.py             # Scenario runner
-F_*.py              # Procedural Functions (F) for each business rule
-Y_archive.tsv       # Optional export of all tuples
-```
-
----
-
-## ▶️ Run the Simulation
+- Color-coded: 🟢 Green for credits, 🔴 Red for debits
+- Add new transactions interactively
+- Hit Enter or click ➕ to submit
+- Logout button returns to login screen
 
 ```bash
-python3 main.py
+python3 ledger_gui.py
 ```
-
-You'll see:
-
-* Transactions approved/declined
-* Business rules applied
-* Immutable tuple log exported
 
 ---
 
-## 🗂 Example Tuples (TSV format)
+## 📝 Reports and Exports
 
-| event\_type         | account\_uuid | amount | reason             |
-| ------------------- | ------------- | ------ | ------------------ |
-| AccountOpened       | acct001       | 200.0  |                    |
-| DepositMade         | acct001       | 100.0  |                    |
-| WithdrawalMade      | acct001       | 50.0   |                    |
-| TransactionDeclined | acct001       | 300.0  | Insufficient funds |
+- `F_report_bank_summary.py`: summarizes all TransactionApproved and TransactionDeclined events
+- Generates `Y_summary_report.md`
+- `run.sh` converts it to a polished `Y_summary_report.pdf`
+
+---
+
+## 📂 Project Structure
+
+```
+F_deposit.py                # Deposit rule
+F_withdrawal.py             # Withdrawal rule
+F_card_payment.py           # Card payment logic
+F_block_account.py          # Account blocking
+F_block_card.py             # Card blocking
+F_report_bank_summary.py    # Summary report logic
+eventzAPI.py                # Core API: publish(), export_tsv(), etc.
+main.py                     # Simulation runner
+ledger_gui.py               # Stakeholder GUI with login/logout
+Y_archive.tsv               # Immutable archive of all events
+Y_summary_report.pdf        # Stakeholder-readable PDF (generated)
+README.md
+run.sh
+```
 
 ---
 
 ## 📄 License
 
-MIT License (feel free to fork and reuse).
+MIT License
 
 ---
 
-## 🙋‍♂️ Author
+## 🙋 Author
 
-[Steve Jackson](https://www.linkedin.com/in/steve-jackson-b8675431/)
-📧 [Steve.Jackson@IEEE.org](mailto:Steve.Jackson@IEEE.org)
-📚 Inventor of Eventz – a lean, event-first architecture for digital transformation
-
----
-
-## 🧠 Learn More
-
-* [📘 Eventz Programmers Manual (PDF)](https://eventzapi.com/wp-content/uploads/2025/03/Eventz-Programmers-Manual-v2.3.pdf)
-* [📽 YouTube: Eventz Explained](https://www.youtube.com/@EventzAPI)
-* [🌐 Eventz Homepage](https://eventzapi.com)
-
-```
-
----
-
-Would you like this dropped into your local folder so you can commit it now?
-```
+[Steve Jackson](https://www.linkedin.com/in/steve-jackson-b8675431/)  
+📧 Steve.Jackson@IEEE.org  
+Inventor of Eventz – a lean, event-driven architecture for digital transformation
